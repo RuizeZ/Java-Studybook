@@ -8,7 +8,7 @@ description: >-
 
 ## Inheritance
 
-A specialized class that `extends`the generalized class inherits the properties and methods from the generalized class. If a class C1 extended from class C2, C1 is the subclass and C2 is superclass.
+A specialized class that ~~`extends`~~the generalized class inherits the properties and methods from the generalized class. If a class C1 extended from class C2, C1 is the subclass and C2 is superclass.
 
 ```java
 public class C1 extends C2 {
