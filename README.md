@@ -18,6 +18,10 @@ public class C1 extends C2 {
 
 The subclass C1 inherits all accessible data fields and method from superclass C2
 
+{% hint style="warning" %}
+A subclass con only extend one superclass
+{% endhint %}
+
 {% hint style="danger" %}
 The private data fields in superclass cannot be accessed in any other class, including its subclass. The only way a subclass can access those data field is through `getter`and `setter`method
 {% endhint %}
@@ -47,6 +51,18 @@ public classname(){
 
 If the superclass does not have an no-arg constructor but has a constructor with arguments, the default no-arg constructor of subclass could not invoke the no-arg constructor of the superclass. This cannot be compiled.
 
+```java
+public class Classname(){
+    public classname(String s){
+        //some statements
+    }
+    public classname(){
+        //some statements
+        this("");
+    }
+}
+```
+
 {% hint style="success" %}
 If a class is designed to be extended, It is better to provide a no-arg constructor to avoid errors.
 
@@ -55,9 +71,13 @@ You should always provide a no-arg constructor for every class!
 
 ## Polymorphism
 
+An object of a subclass can be used wherever its superclass object is used. A variable of a supertype can refer to a subtype object. A variable with a declared type can be assigned an instance from any direct or indirect subclass of that type.
 
+```java
+People p1 = new Student();
+```
 
-
+Class People is declared type and Student is actual type. Because p1's declared type is People, p1 could only call methods that are defined in class People, however, For override method, p1 will call the version of the method in actual type, Student.
 
 ### 
 
