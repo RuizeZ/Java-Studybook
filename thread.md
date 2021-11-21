@@ -18,7 +18,7 @@ A thread provides the mechanism for running a task. A thread is an object that f
 
 ## Creating Tasks and Threads
 
-A task class must implement the `Runnable` interface. A task must be run from a thread. To create tasks, you have to first define a class for tasks, which implements the `Runnable` interface. All it contains is the `run` method. Put your task in the `run` method, and thread will perform way you put in the `run` method.
+A task class must implement the `Runnable` interface. A task must be run from a thread. To create tasks, you have to first define a class for tasks, which implements the `Runnable` interface. All it contains is the `run` method. Put your task in the `run` method, and thread will perform the way you put in the `run` method.
 
 {% tabs %}
 {% tab title="Main " %}
@@ -65,7 +65,7 @@ public class BookingTicket implements Runnable {
 {% endtab %}
 {% endtabs %}
 
-In the `run()` method, the task is to print this.taskName  got ticket. In order to execute this task, a thread is created for each three tasks in the `Main` class. Call `statr()` to start the execution. Here is the output:
+In the `run()` method, the task is to print this.taskName  got ticket. In order to execute this task, a thread is created for each three tasks in the `Main` class. Call `start()` to start the execution. Here is the output:
 
 > task1 got ticket 
 >
@@ -298,7 +298,7 @@ public class Main {
 ```
 {% endtab %}
 
-{% tab title="" %}
+{% tab title="BookingTicketWIthRunnable " %}
 ```java
 public class BookingTicketWIthRunnable implements Runnable {
 	String taskName;
